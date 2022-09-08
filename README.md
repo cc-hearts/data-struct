@@ -1,2 +1,3 @@
-# -alCode
- Algorithm code repository
+# alCode
+
+Algorithm code repository
