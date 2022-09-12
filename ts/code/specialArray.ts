@@ -21,7 +21,8 @@ export function specialArray(nums: number[]): number {
   // 如果比最大的值都要大
   if (middle > nums[nums.length - 1]) {
     right = middle
-  } else if (middle < nums[0]) {
+  }
+  if (middle < nums[0]) {
     left = middle
   }
   while (left < right) {
