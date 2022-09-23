@@ -1,3 +1,8 @@
+/**
+ * @author heart
+ * @description
+ * @Date 2022-09-22
+ */
 export function maxLengthBetweenEqualCharacters(s: string): number {
   if (s.length === 1) return 0
   let left = 0 // 初始值

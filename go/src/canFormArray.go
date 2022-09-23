@@ -1,5 +1,5 @@
 // Package al @see https://leetcode.cn/problems/check-array-formation-through-concatenation/
-package al
+package main
 
 func canFormArray(arr []int, pieces [][]int) bool {
 	m := make(map[int]int, len(pieces))
