@@ -17,5 +17,5 @@ it('a', () => {
 })
 
 it('"hello"', () => {
-  expect(reorderSpaces('hello  ')).toBe('hello ')
+  expect(reorderSpaces('hello  ')).toBe('hello  ')
 })
