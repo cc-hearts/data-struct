@@ -9,6 +9,14 @@ export class TreeNode {
   }
 }
 
+export class ListNode {
+  val: number
+  next: ListNode | null
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val
+    this.next = next === undefined ? null : next
+  }
+}
 // 根据数组生成树节点
 export function generatorTree(list: (number | null)[]) {
   const queue: TreeNode[] = []
