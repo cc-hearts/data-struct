@@ -9,7 +9,7 @@
 // 计算模式匹配移动的次数
 function calculateMaxMatchLength(pattern: string) {
   // 保存每个下标为止的最大的前后缀匹配
-  const arr: number[] = Array.from({ length: pattern.length })
+  const arr: number[] = Array.from<number>({ length: pattern.length }).fill(0)
   let maxLength = 0 // 保存模式匹配的最大的个数
   // for 相当于后缀 maxLength 相当于前缀
   for (let i = 1; i < pattern.length; i++) {
