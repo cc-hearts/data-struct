@@ -1,3 +1,3 @@
-# alCode
+# Daily algorithm
 
-Algorithm code repository
+Daily algorithm learning warehouse
