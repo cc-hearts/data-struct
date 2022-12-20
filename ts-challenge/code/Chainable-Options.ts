@@ -1,7 +1,8 @@
 /**
  * @author heart
- * @description 12
  * @Date 2022-11-09
+ * @Number 00012
+ * @see https://github.com/cc-hearts/type-challenges/blob/main/questions/00012-medium-chainable-options/README.md
  */
 type Chainable<data = {}> = {
   option<T extends string, V extends unknown>(

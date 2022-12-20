@@ -1,6 +1,7 @@
 /**
  * @author heart
  * @Date 2022-10-24
+ * @Number 08987
  * @see https://github.com/type-challenges/type-challenges/blob/main/questions/08987-medium-subsequence/README.md
  */
 

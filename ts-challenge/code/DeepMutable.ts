@@ -1,3 +1,9 @@
+/**
+ * @author cc-heart
+ * @Date 2022-12-20
+ * @Number 17973
+ * @see https://github.com/cc-hearts/type-challenges/blob/main/questions/17973-medium-deepmutable/README.md
+ */
 import { Equal, Expect } from "../utils";
 
 type DeepMutable<T extends Record<string, any>> = T extends Record<string, any>

@@ -1,3 +1,9 @@
+/**
+ * @author cc-heart
+ * @Date 2022-12-20
+ * @Number 04499
+ * @see https://github.com/cc-hearts/type-challenges/blob/main/questions/04499-medium-chunk/README.md
+ */
 type Chunk<
   T extends any[],
   N extends number,
