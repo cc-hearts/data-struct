@@ -1,3 +1,4 @@
+// 1807
 function evaluate(s: string, knowledge: string[][]): string {
   let ans = s
   const map = new Map<string, string>()
