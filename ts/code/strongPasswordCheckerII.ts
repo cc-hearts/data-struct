@@ -17,5 +17,3 @@ function strongPasswordCheckerII(password: string): boolean {
 
   return isDigit && isUpperCase && isLowerCase && isOtherCode
 }
-
-strongPasswordCheckerII("$!)+-$-^(@)@#-(#)+@#*&%+*%($^%+)#()&)!)*()-+&$*@*)+%+*^!%!&!$#%-*!@&%!)%+()^$&+-")
