@@ -1,6 +1,1 @@
-# Daily algorithm
-
-Daily algorithm learning warehouse
-
-
-- [leetcode]()
+# 算法记录
