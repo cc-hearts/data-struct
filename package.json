@@ -7,7 +7,8 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "gen": "ts-node-esm ./script/inspect-navigator.ts"
   },
   "keywords": [
     "code"
@@ -20,5 +21,8 @@
     "vitepress": "1.0.0-alpha.30"
   },
   "author": "heart",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^9.1.2"
+  }
 }

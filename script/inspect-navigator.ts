@@ -1,8 +1,9 @@
-import { readFileSync, readdirSync } from "fs";
+import { readFileSync } from "fs";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
+import { getMarkdownPath } from './shard.js'
 
-const filePath = "docs/algorithm/";
+const filePath = "docs/algorithm";
 const excludeFileName = ["index.md"];
 
 export function readYamlFontMatterTitle(path: string) {
@@ -24,36 +25,36 @@ export function readYamlFontMatterTitle(path: string) {
   return null;
 }
 
-function readMdFileName(path: string) {
-  const fileList = readdirSync(path, "utf-8");
+async function readMdFileName(path: string) {
+  const fileList = await getMarkdownPath(path);
   const markDownNames: string[] = [];
 
   fileList.forEach((each) => {
     if (/\.md$/.test(each)) {
-      markDownNames.push(each);
+      const [fileName] = each.split('/').slice(-1)
+      if (fileName && !excludeFileName.includes(fileName))
+        markDownNames.push(each);
     }
   });
 
-  return markDownNames.filter(val => !excludeFileName.includes(val));
+  return markDownNames
 }
 
-// readMdFileName(filePath);
 
 /**
  * 这里的path 只用于一个文件夹
  * @param {string} dirPath
  */
-function generateToc(dirPath: string) {
-  const mdNames = readMdFileName(dirPath);
+async function generateToc(dirPath: string) {
+  const mdNames = await readMdFileName(dirPath);
   return mdNames
     .map((mdName) => {
-      const title = readYamlFontMatterTitle(resolve(dirPath, mdName));
-      console.log(resolve(dirPath, mdName));
-      return `- [${title}](./${mdName})`;
+      const title = readYamlFontMatterTitle(mdName);
+      return `- [${title}](.${mdName.replace(resolve(process.cwd(), filePath), '')})`;
     })
     .join("\n");
 }
 
 const dirPath = resolve(fileURLToPath(import.meta.url), "../..", filePath);
-const val = generateToc(dirPath);
-console.log(val);
+
+console.log(await generateToc(dirPath));
