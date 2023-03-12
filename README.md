@@ -1,1 +1,2 @@
-# Algorithm recording
+# data structures
+document common data structures
